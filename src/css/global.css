@@ -1,0 +1,313 @@
+html,body,#root{
+   display: flex;
+   height: 100%;
+   flex-direction: column;
+   flex:1;
+   transition: all .5s;
+  margin:0;
+  font-family: 'Roboto', sans-serif;
+  color:#8E8E8E
+
+ 
+}
+.t-f-dark{
+  color:  #8E8E8E
+}
+
+.t-f-darker{
+   color: #2A2C2D;
+}
+.t-f-bolder{
+    font-weight: bolder;
+ }
+ .t-f-mid{
+  font-size: 14px;
+ }
+.t-img{
+    height:100%;
+    width:100%;
+}
+.t-container {
+    height: 100%;
+}
+
+.t-sm-img{
+    height: 35px;
+    width:35px;
+    overflow: hidden;
+}
+.t-img-round{
+    border-radius: 50%;
+}
+
+.t-app-wrapper {
+    align-self: stretch;
+    flex:1;
+}
+
+.t-flex {
+    display :flex
+}
+.t-flex-row{
+flex-flow: row;
+} 
+.t-flex-column{
+flex-flow: column;
+} 
+.t-flex-x{
+    justify-content: center;
+    align-items: center;
+}
+.t-flex-v{
+    
+    align-items: center;
+}
+.t-flex-h{
+justify-content: center
+}
+.t-login{
+    background-image: url("../assets/family.png");
+    background-size: cover;
+    align-items: stretch;
+    flex: 1;  
+    align-self: stretch;
+}
+.t-login  label {
+   text-align: center;
+  
+}
+a.register{
+    font-weight: 800
+}
+.t-login  label.lbl-login {
+    border-bottom-style: solid;
+    border-width: 1px;
+    margin-top: 10px;
+    background-color: #F1F0F3;
+    text-align: left;
+   
+}
+
+.t-login-views{
+    justify-content: flex-end
+}
+.t-login  label.lbl-login >input{
+    outline: none;
+    border-style: none;
+    width:100%;
+    height: 50px;
+    background-color: #F1F0F3;
+    font-weight :700 ;
+    font-size: 20px;
+}
+.t-login-holder{
+    background-color: rgb(241, 240, 243);
+    padding: 10px 15px;
+    
+}
+.t-login  input[type='radio']{
+    display: none;
+}
+input[name="t-login-view"]:checked + label > .glow { 
+    opacity: 1;
+}
+input[name="t-login-view"]:checked + label{
+    
+   color:#2A2C2D;
+}
+.t-login-views{
+    margin-top:10px;
+}
+.t-login-views label{   
+    border-width: 1px;
+    cursor: pointer; 
+    transition: all 0.5s;
+    border-color: transparent;
+    margin:6px 10px;
+    padding: 4px 0;
+    position: relative;
+    min-height: 35px;   
+}
+
+.t-login-views label:hover{
+     
+   color:#2A2C2D;
+
+   }
+
+a{
+    cursor: pointer;
+}
+.t-btn{
+    outline: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-style: none;
+    background-color: #2A0659;
+    color:white;
+    border-radius: 4px;
+}
+.glow {      
+    border: 1px solid #99191D; /* some kind of blue border */
+     position: absolute;
+     bottom: 0;
+     transition: all .5s;
+     width:100%;
+     opacity: 0;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+
+
+    /* make it glow! */
+    -webkit-box-shadow: 0px 0px 4px #99191D;
+       -moz-box-shadow: 0px 0px 4px #99191D;
+            box-shadow: 0px 0px 4px #99191D; 
+
+
+
+}
+
+.t-btn-login{
+    min-width:200px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 10px;
+    transition:  background-color .5s;
+    background-color: #8C0D09;
+}
+
+.t-btn-login:hover{
+    background-color: #DB242A;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+         border-radius: 4px;
+
+
+ /* make it glow! */
+ -webkit-box-shadow: 0px 0px 4px #99191D;
+    -moz-box-shadow: 0px 0px 4px #99191D;
+         box-shadow: 0px 0px 4px #99191D; 
+}
+
+
+.t-register{
+    font-size: 11px;
+}
+.t-register input[type ="text"]{
+  background-color: transparent;
+  outline: none;
+  border-style: none;
+  border-bottom-style: solid;
+}
+.t-reg-itempair {
+    margin-top: 10px;
+}
+
+.t-reg-itempair label {
+    margin: 2px;
+    text-align: left;
+    padding: 5px;
+}
+
+
+
+.t-left-section{
+   background-color:#F1F0F3;
+   padding: 7px;
+   font-size: 11px;
+}
+
+.t-left-section ul.t-mainApp-nav{    
+    padding: 0;
+
+}
+.t-left-section li > span{
+
+    position: absolute;
+    background-color: #d80852;
+    width: 5px;
+    height: 100%;
+    flex: 3;
+    left: 0;
+   
+}
+
+.t-left-section li  svg {
+    font-size: 12px;
+}
+
+.t-left-section li  >label{
+    /* width: 100%; */
+    flex: 1;
+    align-self: stretch;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 14px 7px;
+}
+.t-left-section li  >label>div{
+    min-width: 100px;
+}
+.t-left-section li{
+    z-index: 10;
+    list-style: none;
+    position: relative; 
+    margin-bottom: 2px;
+}
+.t-left-section li>label:hover{
+    background-color: rgba(190, 5, 5, 0.127);
+}
+
+.t-left-section li:hover   span,.t-left-section li:hover svg{
+    opacity: 1;
+    color:#d80852;
+    fill:#d80852;
+}
+
+input[name='main-nav']:checked  ~ label{
+    background-color: rgba(190, 5, 5, 0.127);
+    color:red;
+    
+}
+input[name='main-nav']:checked  ~ span{
+    opacity:1;
+}
+
+
+.t-family {
+    background-color: #FAFAFA;
+    flex:1;
+    align-self: stretch;
+    font-size: 11px;
+}
+
+
+.t-family-section {
+    margin-left: auto;
+    min-width: 200px;
+    align-self: stretch;
+    /* -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175); */
+     box-shadow: 0 0px 390px  rgba(0,0,0,.127);
+    -webkit-box-shadow: 0 0 390px rgba(0,0,0,0.127);
+}
+
+.t-familyItem{
+    margin-bottom: 4px;
+    background-color: white;
+    min-height: 35px;
+    padding:  7px;
+}
+.t-familyItem  >div{
+    padding: 2px;
+}
+
+.t-familyItem   .t-sub >div{
+    margin: 7px;
+}
+
+
+
+
