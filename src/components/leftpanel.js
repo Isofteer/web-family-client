@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 import { switchPage } from "../actions/navigation";
 import store from '../store/store'
 
+
 // icons
 
 import logo from '../assets/logo.png';

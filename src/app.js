@@ -19,21 +19,24 @@ import './css/size1200.css'
 import {NAV_DASHBOARD,NAV_FAMILY} from './constants/action-types'
 
 const mapStateToProps = (state) => ({ 
-  active_page: state.active_page
+  redux: state
 });
 
 
 class  App extends React.Component{
 
+
 componentDidUpdate (){
-
-  var dd= store.getState();
-
-  console.log({dd});
+  console.log({reduxstate:store.getState()});
   
 }
 
     render(){
+
+   var { active_page }   = this.props.redux.appStore ;  
+
+   console.log({active_page})
+     
         return <div className = "t-container t-flex  t-flex-x"> 
 
 
@@ -42,11 +45,11 @@ componentDidUpdate (){
           <div className = 't-app-wrapper t-flex'>
            <LeftPanel/>
             {
-              this.props.active_page===NAV_DASHBOARD ? <div> NAV_DASHBOARD</div>:null
+              active_page===NAV_DASHBOARD ? <div> NAV_DASHBOARD</div>:null
             }
 
            {
-             this.props.active_page===NAV_FAMILY ? <Family/>:null
+            active_page===NAV_FAMILY ? <Family/>:null
           }
           </div>
            </div>
