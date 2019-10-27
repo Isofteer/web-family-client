@@ -52,10 +52,7 @@ function mapDispatchToProps(dispatch) {
                     </div>
                   </label>                             
                </li>
-           
-
-
-             <li> 
+               <li> 
                 <input name="main-nav"  style ={{display:"none"}} onClick ={this.handleChangeView } type ="radio" id="NAV_FAMILY" value ="family"/>
                 <span className ="glow" ></span>  
                 <label htmlFor="NAV_FAMILY"> 
@@ -65,9 +62,40 @@ function mapDispatchToProps(dispatch) {
                     </div>
                   </label>                             
                </li>
+               <li> 
+                <input name="main-nav"  style ={{display:"none"}} onClick ={this.handleChangeView } type ="radio" id="NAV_DASHBOARD" value ="dashboard"/>
+                <span className ="glow" ></span>  
+                <label htmlFor="NAV_DASHBOARD"> 
+                    <div>
+                    <DashboardIcon/>  &nbsp;  
+                    <span> Pictures</span>
+                    </div>
+                  </label>                             
+               </li>
+           
+               <li> 
+                <input name="main-nav"  style ={{display:"none"}} onClick ={this.handleChangeView } type ="radio" id="NAV_DASHBOARD" value ="dashboard"/>
+                <span className ="glow" ></span>  
+                <label htmlFor="NAV_DASHBOARD"> 
+                    <div>
+                    <DashboardIcon/>  &nbsp;  
+                    <span> Videos</span>
+                    </div>
+                  </label>                             
+               </li>
            
 
-
+               <li> 
+                <input name="main-nav"  style ={{display:"none"}} onClick ={this.handleChangeView } type ="radio" id="NAV_DASHBOARD" value ="dashboard"/>
+                <span className ="glow" ></span>  
+                <label htmlFor="NAV_DASHBOARD"> 
+                    <div>
+                    <DashboardIcon/>  &nbsp;  
+                    <span> Events</span>
+                    </div>
+                  </label>                             
+               </li>
+           
 
              <li> 
                 <input name="main-nav"  style ={{display:"none"}} onClick ={this.handleChangeView } type ="radio" id="NAV_SUPPORT" value ="support"/>

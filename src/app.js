@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { connect } from "react-redux"
 import store from './store/store'
-import { addArticle } from './actions/rootaction';
-import List from './components/List'
 import LeftPanel from './components/leftpanel'
 import Login from './components/login'
 import Family from './components/Family'
@@ -33,16 +31,13 @@ componentDidUpdate (){
 
     render(){
 
-   var { active_page }   = this.props.redux.appStore ;  
+   var { active_page, ifkuserId }   = this.props.redux.appStore ;  
 
-   console.log({active_page})
      
         return <div className = "t-container t-flex  t-flex-x"> 
-
-
-          {/* <Login/> */}
-         
-          <div className = 't-app-wrapper t-flex'>
+          {
+            ifkuserId? 
+            <div className = 't-app-wrapper t-flex'>
            <LeftPanel/>
             {
               active_page===NAV_DASHBOARD ? <div> NAV_DASHBOARD</div>:null
@@ -51,7 +46,9 @@ componentDidUpdate (){
            {
             active_page===NAV_FAMILY ? <Family/>:null
           }
-          </div>
+          </div> :
+          <Login/>
+          }
            </div>
     }
 }

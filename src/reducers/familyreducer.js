@@ -3,7 +3,8 @@
 import { GETPARENTS } from "../constants/action-types";
 
 const initialState = { 
-    parents:[]
+    parents:[],
+    
   };
 
 function familyReducer(state = initialState, action) {  

@@ -5,6 +5,9 @@ import Axios from 'axios'
 import { connect } from "react-redux"
 import { SetParent, GetParent,GetParents, } from "../actions/familyactions";
 
+
+import AddParent from './addparent'
+
 const mapStateToProps = (state) => ({ 
     redux: state
   });
@@ -19,11 +22,11 @@ function mapDispatchToProps(dispatch) {
  class  Family extends React.Component{    
     componentDidMount(){     
 
-        console.log({props:this.props})
+      var { API_URL, ifkuserId }   = this.props.redux.appStore ; 
 
-        var url = "https://localhost:44307/api/family";
+        var url = API_URL+"api/family/GetParents";
         
-        Axios.get(url)
+        Axios.get(url, {ifkuserId})
         .then(result=>{      
 
          let {data} =  result;     
@@ -38,22 +41,25 @@ function mapDispatchToProps(dispatch) {
 
     }
 
+   
     render(){
 
            var  {parents} = this.props.redux.familyStore;
-
              console.log({parents});
              
-           
+                   return <div className = "t-family t-flex  t-flex-x">                 
+                   <div style ={{alignSelf:"stretch",flex:1,backgroundColor:"white"}} className = "t-flex t-flex-x">
+                    
+                     <AddParent />
+
+                   </div>              
 
 
-        return <div className = "t-family t-flex  t-flex-x"> 
-                
-                <div className  ="t-family-section t-flex t-flex-column">
+
+                <div className  ="t-family-section t-flex t-flex-column">                
                     <div className = "t-familyItem  t-flex t-flex-x t-f-darker t-f-bolder t-f-mid"> Parents  </div>
                    
-                    <div className = "t-familyItem"> 
-                                              
+                    <div className = "t-familyItem">                                              
                       
                         {
                             parents.map((parent,index )=> 

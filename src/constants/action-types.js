@@ -4,6 +4,9 @@ export const ADD_ARTICLE = "ADD_ARTICLE";
 
 
 
+//app sessions
+export const APP_USERID = "APP_USERID";
+
 
 
 

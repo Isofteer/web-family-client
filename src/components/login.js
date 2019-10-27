@@ -6,11 +6,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Hidden from '@material-ui/core/Hidden';
 import withWidth from '@material-ui/core/withWidth';
-import Register from '../components/register'
 
+
+
+
+import Register from '../components/register'
 import logo from '../assets/logo.png';
 
-console.log(logo);
 
 class Login extends React.Component {    
 
